@@ -6,7 +6,7 @@ const MainLayout = () => {
     return (
         <div className='overflow-hidden'>
             <Sidebar/>
-            <div className="ml-0 md:ml-64 sm:ml-56">
+            <div className="ml-0 mt-10 lg:mt-0 lg:ml-64">
                 <Outlet/>
             </div>
         </div>
