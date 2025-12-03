@@ -30,15 +30,15 @@ const Home = () => {
                 </div>
 
                 {/* Right Image */}
-                <div className="md:w-1/2 mt-8 md:mt-0 relative flex justify-center bg-amber-500">
+                <div className="md:w-1/2 mt-8 md:mt-0 relative flex justify-center ">
                     <img
                         src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=800&q=80"
                         alt="Profile"
-                        className="w-64 sm:w-96 md:w-80 lg:w-70 max-h-70  md:max-h-[32rem] lg:max-h-[24rem] rounded-sm object-cover mx-8 my-10"
+                        className="w-64 sm:w-[26rem] md:w-80 lg:w-70 max-h-70 sm:max-h-[28rem]  md:max-h-[32rem] lg:max-h-[24rem] rounded-sm object-cover mx-8 my-10"
                     />
                     {/* Corner Decorations */}
-                    <div className="absolute top-0 left-0 lg:left-8 w-8 h-8 lg:w-16 lg:h-16 border-t-8 border-l-8 border-red-500"></div>
-                    <div className="absolute bottom-0 right-0 lg:right-8 w-8 h-8 lg:w-16 lg:h-16 border-b-8 border-r-8 border-red-500"></div>
+                    <div className="absolute top-0 left-0 lg:left-8 w-8 sm:w-12 h-8 sm:h-12 lg:w-16 lg:h-16 border-t-8 border-l-8 border-red-500"></div>
+                    <div className="absolute bottom-0 right-0 lg:right-8 w-8 sm:w-12 h-8 sm:h-12 lg:w-16 lg:h-16 border-b-8 border-r-8 border-red-500"></div>
                 </div>
             </section>
         </motion.div>
