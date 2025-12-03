@@ -44,7 +44,7 @@ const Sidebar = () => {
 
             {/* Navbar for smaller screens */}
             <div className={`lg:hidden fixed top-0 left-0 w-full bg-white ${open ? "shadow-md" : "shadow-md"} flex items-center justify-between px-6 py-4 z-40`}>
-                <img src="src/assets/Logo.png" className="h-12 w-12 object-cover" alt="Logo" />
+                <img src={logoImg} className="h-16 w-16 object-cover" alt="Logo" />
                 <button onClick={() => setOpen(!open)} className="text-2xl text-gray-700">
                     {open ? <FaTimes /> : <FaBars />}
                 </button>
