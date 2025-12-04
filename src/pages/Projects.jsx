@@ -225,34 +225,34 @@ const ProjectPage = () => {
 
             {/* Impact stats */}
 
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
-  {/* Completed Projects */}
-  <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
+                {/* Completed Projects */}
+                <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
                   transform transition duration-300 hover:scale-105 hover:shadow-xl">
-    <h3 className="text-3xl font-bold text-orange-500">
-      <CountUp start={1} end={totalProjects} duration={2.2} />+
-    </h3>
-    <p className="text-gray-700 mt-2">Completed Projects</p>
-  </div>
+                    <h3 className="text-3xl font-bold text-orange-500">
+                        <CountUp start={1} end={totalProjects} duration={2.2} />+
+                    </h3>
+                    <p className="text-gray-700 mt-2">Completed Projects</p>
+                </div>
 
-  {/* Current Projects */}
-  <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
+                {/* Current Projects */}
+                <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
                   transform transition duration-300 hover:scale-105 hover:shadow-xl">
-    <h3 className="text-3xl font-bold text-orange-500">
-      <CountUp start={1} end={currentProjects} duration={2.2} />
-    </h3>
-    <p className="text-gray-700 mt-2">Current Projects</p>
-  </div>
+                    <h3 className="text-3xl font-bold text-orange-500">
+                        <CountUp start={1} end={currentProjects} duration={2.2} />
+                    </h3>
+                    <p className="text-gray-700 mt-2">Current Projects</p>
+                </div>
 
-  {/* Freelance Clients */}
-  <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
+                {/* Freelance Clients */}
+                <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
                   transform transition duration-300 hover:scale-105 hover:shadow-xl">
-    <h3 className="text-3xl font-bold text-orange-500">
-      <CountUp start={1} end={freelanceClients} duration={2.2} />+
-    </h3>
-    <p className="text-gray-700 mt-2">Freelance Clients Served</p>
-  </div>
-</div>
+                    <h3 className="text-3xl font-bold text-orange-500">
+                        <CountUp start={1} end={freelanceClients} duration={2.2} />+
+                    </h3>
+                    <p className="text-gray-700 mt-2">Freelance Clients Served</p>
+                </div>
+            </div>
 
 
             {/* Search + Filters */}
@@ -280,7 +280,7 @@ const ProjectPage = () => {
             </div>
 
             {/* Complete Projects */}
-            <div id="complete-projects" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div id="complete-projects" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10">
                 {filteredProjects.map((proj, idx) => (
                     <motion.article
                         key={proj.name}

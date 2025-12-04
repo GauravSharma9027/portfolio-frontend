@@ -122,7 +122,7 @@ const ContactPage = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="mt-16 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto mb-4"
+                className="mt-16 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mb-8"
             >
                 {[
                     { icon: <FaLinkedin />, label: "LinkedIn", href: "https://linkedin.com" },
@@ -153,7 +153,7 @@ const ContactPage = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg p-8 max-w-4xl mx-auto space-y-6"
+                className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg p-8 max-w-5xl space-y-6"
             >
                 {/* Grid: Name, Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -154,7 +154,7 @@ import { motion } from 'framer-motion';
                 className="mb-16"
             >
                 <h2 className="text-2xl font-bold text-orange-500 mb-8">🛠 Skills</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-8">
                     {skills.map((skill, idx) => (
                         <motion.div
                             key={idx}
