@@ -7,26 +7,39 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
 
-        {/* Main Layout */}
-        <Route path="/" element={<MainLayout />}>
-          
-          {/* nested pages */}
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="services" element={<Services />} />
-          <Route path="contact" element={<Contact />} />
+      <BrowserRouter>
+        <Routes>
+          {/* Main Layout */}
+          <Route path="/" element={<MainLayout />}>
+            {/* nested pages */}
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="services" element={<Services />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
 
-        </Route>
-
-      </Routes>
-    </BrowserRouter>
   )
 }
 
