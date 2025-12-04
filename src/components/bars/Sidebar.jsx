@@ -56,6 +56,11 @@ const Sidebar = () => {
         ${open ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="p-6">
+                    <div className='flex justify-end items-center sm:hidden'>
+                        <button onClick={() => setOpen(!open)} className="text-2xl text-gray-700">
+                            {open ? <FaTimes /> : <FaBars />}
+                        </button>
+                    </div>
                     <div className='mb-6 w-full flex justify-center items-center'>
                         <img src={logoImg} className="h-30 w-30 object-cover" alt="Logo" />
                     </div>

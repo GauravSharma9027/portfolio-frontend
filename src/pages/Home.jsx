@@ -10,7 +10,7 @@ const Home = () => {
             exit={{ x: "-100vw", opacity: 0 }}    // exit करते समय left में slide हो
             transition={{ type: "spring", stiffness: 80, damping: 20 }} // smooth motion
         >
-            <section className="h-full relative bg-gray-50 py-16 px-6 sm:px-12 lg:px-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between">
+            <section className="h-full relative bg-gray-50 py-16 px-6 sm:px-12 lg:px-10 flex flex-col lg:flex-row items-center sm:justify-center lg:justify-between">
 
                 {/* Left Text Content */}
                 <div className="mt-4 lg:mt-0 lg:w-1/2 space-y-4">
