@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -15,18 +16,21 @@ const Home = () => {
                 {/* Left Text Content */}
                 <div className="mt-4 lg:mt-0 lg:w-1/2 space-y-4">
                     <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-                        Hello, my name is <br /><span className="text-red-500 font-script text-2xl sm:text-3xl ">Alimi Mousaad</span>
+                        Hello, my name is <br /><span className="text-red-500 font-script text-2xl sm:text-3xl ">Gaurav Sharma</span>
                     </h1>
                     <h2 className="text-3xl md:text-2xl font-bold text-gray-900">
-                        I'm a <span className="text-red-500">Graphic Designer</span>
+                        I'm a <span className="text-red-500">Software Developer</span>
                     </h2>
                     <p className="text-gray-600 text-base sm:text-xl md:text-[16px]">
-                        I'm a web Designer with extensive experience for over 10 years.
-                        My expertise is to create and website design, graphic design, and many more...
+                        I’m a passionate Full-Stack Software Developer and a Freelancer, crafting modern, scalable and user-friendly digital experiences.
+                        With strong expertise in MERN Stack, UI/UX, and Responsive Web Design, I build high-performance websites, dashboards, and real-world business solutions.
+                        My work focuses on clean architecture, smooth animations, optimized performance, and industry-level coding standards to deliver products that not only look great but also work flawlessly.
                     </p>
-                    <button className="mt-4 bg-red-500 text-white py-2 px-6 rounded-[50rem] hover:bg-red-600 transition">
-                        More About Me
-                    </button>
+                    <Link to="/about">
+                        <button className="mt-4 bg-red-500 text-white py-2 px-6 rounded-[50rem] hover:bg-red-600 transition">
+                            More About Me
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Right Image */}
