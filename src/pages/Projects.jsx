@@ -11,6 +11,7 @@ import digitexguiderLaptop from "../assets/Pages/Projects/Digital Services & Blo
 import tempulsePhone from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Phone.png"
 import tempulseTablet from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Tablet.png"
 import tempulseLaptop from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Laptop.png"
+import { Link } from "react-router-dom";
 
 
 // Reusable pill
@@ -562,18 +563,16 @@ const ProjectPage = () => {
 
                                 {/* CTA */}
                                 <div className="flex flex-col sm:flex-row justify-end gap-4 pt-2">
-                                    <button
-                                        onClick={() => window.open("mailto:you@example.com?subject=Project Inquiry")}
-                                        className="bg-gray-900 text-white py-2.5 px-6 rounded-lg hover:bg-black transition"
-                                    >
-                                        Contact Us
-                                    </button>
-                                    <button
-                                        onClick={() => window.open("https://yourdomain.com/about", "_blank")}
-                                        className="bg-orange-500 text-white py-2.5 px-6 rounded-lg hover:bg-orange-600 transition"
-                                    >
-                                        About Us
-                                    </button>
+                                    <Link to="/contact">
+                                        <button className="bg-gray-900 text-white py-2.5 px-6 rounded-lg hover:bg-black transition">
+                                            Contact Us
+                                        </button>
+                                    </Link>
+                                    <Link to="/services">
+                                        <button className="bg-orange-500 text-white py-2.5 px-6 rounded-lg hover:bg-orange-600 transition">
+                                            Services
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </motion.div>
