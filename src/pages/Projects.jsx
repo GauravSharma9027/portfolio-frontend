@@ -21,9 +21,9 @@ const ProjectPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
 
     // Impact stats
-    const totalProjects = 25;
-    const currentProjects = 4;
-    const freelanceClients = 14;
+    const totalProjects = 8;
+    const currentProjects = 3;
+    const freelanceClients = 9;
 
     // Close modal on ESC
     const handleKeyDown = useCallback((e) => {
@@ -210,8 +210,9 @@ const ProjectPage = () => {
                         Turning ideas into <span className="text-orange-500">Impactful Projects</span>
                     </p>
                     <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aspernatur mollitia officia rem doloremque! Esse veniam vel repellat ipsa molestiae consequatur vitae!
+                        Welcome to my Projects portfolio. Here you will find a curated collection of my ongoing and completed projects, showcasing my expertise in full-stack development, problem-solving, and innovative solutions. Each project highlights the technologies used, project goals, and implementation details, providing a comprehensive view of my skills and professional growth. I continuously strive for high-quality, scalable, and user-centric solutions, demonstrating both technical proficiency and a commitment to excellence.
                     </p>
+
                     <div className="flex justify-center">
                         <button
                             onClick={scrollToComplete}

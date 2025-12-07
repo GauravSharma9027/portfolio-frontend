@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Typewriter } from "react-simple-typewriter";
 const Home = () => {
     return (
         <motion.div
@@ -19,7 +19,17 @@ const Home = () => {
                         Hello, my name is <br /><span className="text-red-500 font-script text-2xl sm:text-3xl ">Gaurav Sharma</span>
                     </h1>
                     <h2 className="text-3xl md:text-2xl font-bold text-gray-900">
-                        I'm a <span className="text-red-500">Software Developer</span>
+                        I'm a <span className="text-red-500">
+                            <Typewriter
+                                words={["Full Stack Developer.","Web Developer.", "Designer.", "Freelancer.","Software Developer."]}
+                                loop={true}
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={80}
+                                deleteSpeed={70}
+                                delaySpeed={2000}
+                            />
+                        </span>
                     </h2>
                     <p className="text-gray-600 text-base sm:text-xl md:text-[16px]">
                         I’m a passionate Full-Stack Software Developer and a Freelancer, crafting modern, scalable and user-friendly digital experiences.
