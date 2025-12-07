@@ -3,8 +3,18 @@ import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import CountUp from "react-countup";
+// project 1
+import digitexguiderPhone from "../assets/Pages/Projects/Digital Services & Blogging Platform/Phone.png"
+import digitexguiderTablet from "../assets/Pages/Projects/Digital Services & Blogging Platform/Tablet.png"
+import digitexguiderLaptop from "../assets/Pages/Projects/Digital Services & Blogging Platform/Laptop.png"
+// Project 2
+import tempulsePhone from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Phone.png"
+import tempulseTablet from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Tablet.png"
+import tempulseLaptop from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Laptop.png"
+
 
 // Reusable pill
+
 const Pill = ({ children }) => (
     <span className="px-3 py-1.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 text-sm font-medium">
         {children}
@@ -43,8 +53,89 @@ const ProjectPage = () => {
         if (section) section.scrollIntoView({ behavior: "smooth" });
     };
 
+    const scrollToCurrentProject = () => {
+        const section = document.getElementById("current-projects");
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+    };
+
     // Portfolio projects (replace image paths with your assets)
     const projects = [
+        {
+            name: "Digital Services & Blogging Platform",
+            short: "SEO-optimized WordPress website with service pages, blog system, and scalable structure.",
+            images: [
+                digitexguiderLaptop,
+                digitexguiderTablet,
+                digitexguiderPhone
+            ],
+            github: null, // WordPress-based project, so GitHub not applicable
+            live: "https://digitexguider.com/",
+            tech: ["WordPress", "Elementor", "PHP", "MySQL", "cPanel", "Yoast SEO"],
+            description:
+                "A fully responsive digital services website built on WordPress, designed for performance, SEO, and service-based conversions. Includes custom landing pages, optimized blog section, mobile-first design, and fast-loading architecture. Ideal for agencies needing a professional online presence and lead-generation funnel.",
+            features: [
+                "Custom Elementor-based pages for services",
+                "Fully responsive mobile-first UI",
+                "Optimized blog system with categories & tags",
+                "Yoast-powered SEO optimization",
+                "Speed-optimized caching & CDN integration",
+                "Contact forms with email routing",
+                "User-friendly CMS for non-tech users"
+            ],
+            challenges: [
+                "Maintaining site speed with heavy content blocks",
+                "Building optimized page layouts using Elementor",
+                "SEO tuning for higher Google discoverability",
+                "Ensuring uniform design across all screen sizes"
+            ],
+            outcomes: [
+                "Page load time improved to under 2.5 seconds",
+                "SEO health score increased to 90+",
+                "Conversion rate improved with optimized landing pages",
+                "Better engagement due to structured blog content"
+            ],
+            role: "Frontend & WordPress Developer",
+            timeline: "2 weeks",
+            category: "Web"
+        },
+        {
+            name: "Tempulse Global Consultancy Website",
+            short: "International consulting & virtual-office platform website with global services and digital transformation offerings.",
+            images: [
+                tempulseLaptop,
+                tempulseTablet,
+                tempulsePhone
+            ],
+            github: null,  // WordPress/Static site — no public GitHub repo listed
+            live: "https://tempulse.global/",
+            tech: ["WordPress", "HTML5", "CSS3", "JavaScript", "PHP", "Responsive design"],
+            description:
+                "A professional, multi-service consultancy website built for Tempulse Global — combining international business-formation services, virtual offices, digital transformation consulting, VR empowerment programs and web/AI-services under one roof. The site is optimized for global reach, multilingual support, clear service navigation and lead generation through clean UX and strategic layout.",
+            features: [
+                "Multi-service landing pages (Company Formation, Virtual Offices, Web & AI Services, VR Training)",
+                "Dynamic Services & Locations listing (global addresses, country-wise offerings)",
+                "Blog / News / Insights section to publish research, case studies and thought leadership content",
+                "Contact & enquiry forms for clients interested in services",
+                "Responsive design with clear navigation for international audience",
+                "Multilingual support / global-ready layout",
+                "Integration of external booking / contact systems"
+            ],
+            challenges: [
+                "Organizing many service offerings without clutter — ensuring UX remains clean and intuitive",
+                "Managing global-address & location data dynamically for multiple countries",
+                "Ensuring site responsiveness and usability across devices for global visitors",
+                "Balancing marketing copy with clarity about legal / compliance aspects of international consulting"
+            ],
+            outcomes: [
+                "Clear representation of global services & offerings under one roof",
+                "Better user engagement & ease of contact with clients seeking international expansion or virtual office solutions",
+                "Professional online presence aiding credibility for international clients",
+                "Easier content updates (services, blog, locations) enabling scalable growth of website with business needs"
+            ],
+            role: "Frontend & CMS Developer / Web Designer",
+            timeline: "4–5 weeks",
+            category: "Web / Consultancy"
+        },
         {
             name: "E‑Commerce Platform",
             short: "Scalable store with catalog, cart, payments, and admin dashboard.",
@@ -159,10 +250,9 @@ const ProjectPage = () => {
 
     // Current projects (freelancing visibility)
     const currentWork = [
-        { name: "SaaS Analytics Dashboard", progress: 60, tech: ["React.js", "Next.js", "Chart.js"] },
-        { name: "Booking Platform", progress: 45, tech: ["Node.js", "PostgreSQL", "Stripe"] },
-        { name: "Brand Landing Revamp", progress: 70, tech: ["TailwindCSS", "Framer Motion"] },
-        { name: "Mobile Health Tracker", progress: 35, tech: ["React Native", "Firebase"] }
+        { name: "Site Management System", progress: 75, tech: ["React JS", "Tailwind CSS", "Chart JS", "Frame Motion"] },
+        { name: "CDR File Converter", progress: 90, tech: ["React JS", "Tailwind CSS", "Node JS", "Express JS"] },
+        { name: "Note Mania", progress: 30, tech: ["React JS", "Tailwind CSS", "Framer Motion", "Node JS", "Express JS", "Cloudinary", "Multer"] },
     ];
 
     // Search + category filter
@@ -228,28 +318,31 @@ const ProjectPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
                 {/* Completed Projects */}
-                <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
+                <button onClick={scrollToComplete}>
+                    <div className="cursor-pointer bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
                   transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <h3 className="text-3xl font-bold text-orange-500">
-                        <CountUp start={1} end={totalProjects} duration={2.2} />+
-                    </h3>
-                    <p className="text-gray-700 mt-2">Completed Projects</p>
-                </div>
-
+                        <h3 className="text-3xl font-bold text-orange-500">
+                            <CountUp start={1} end={totalProjects} duration={5} />+
+                        </h3>
+                        <p className="text-gray-700 mt-2">Completed Projects</p>
+                    </div>
+                </button>
                 {/* Current Projects */}
-                <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
+                <button onClick={scrollToCurrentProject}>
+                    <div className="cursor-pointer bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
                   transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <h3 className="text-3xl font-bold text-orange-500">
-                        <CountUp start={1} end={currentProjects} duration={2.2} />
-                    </h3>
-                    <p className="text-gray-700 mt-2">Current Projects</p>
-                </div>
+                        <h3 className="text-3xl font-bold text-orange-500">
+                            <CountUp start={1} end={currentProjects} duration={5} />
+                        </h3>
+                        <p className="text-gray-700 mt-2">Current Projects</p>
+                    </div>
+                </button>
 
                 {/* Freelance Clients */}
                 <div className="bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 text-center 
                   transform transition duration-300 hover:scale-105 hover:shadow-xl">
                     <h3 className="text-3xl font-bold text-orange-500">
-                        <CountUp start={1} end={freelanceClients} duration={2.2} />+
+                        <CountUp start={1} end={freelanceClients} duration={5} />+
                     </h3>
                     <p className="text-gray-700 mt-2">Freelance Clients Served</p>
                 </div>
@@ -295,12 +388,12 @@ const ProjectPage = () => {
                         className="group cursor-pointer bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-2xl transition-transform"
                     >
                         <div className="relative">
-                            <img src={proj.images[0]} alt={proj.name} className="w-full h-48 object-cover" />
+                            <img src={proj.images[0]} alt={proj.name} className="w-full h-48 object-contain" />
                             <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/40 to-transparent"></div>
                         </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-2">{proj.name}</h3>
-                            <p className="text-sm text-gray-700">{proj.short}</p>
+                        <div className="py-4 px-6">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-1 2xl:line-clamp-2">{proj.name}</h3>
+                            <p className="text-sm text-gray-700 line-clamp-2 md:line-clamp-3 2xl:line-clamp-4">{proj.short}</p>
                         </div>
                     </motion.article>
                 ))}
@@ -320,13 +413,13 @@ const ProjectPage = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 50, opacity: 0 }}
                             transition={{ duration: 0.35 }}
-                            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-6xl mx-4 overflow-hidden"
+                            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl mx-4 overflow-hidden"
                             role="dialog"
                             aria-modal="true"
                         >
                             {/* Header */}
-                            <div className="flex items-center justify-between px-8 pt-8 pb-6 border-b border-gray-200">
-                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                            <div className="flex items-center justify-between px-8 py-3 border-b border-gray-200">
+                                <h3 className="text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl font-bold text-gray-900">
                                     {selectedProject.name}
                                 </h3>
                                 <button
@@ -334,7 +427,7 @@ const ProjectPage = () => {
                                         setSelectedProject(null);
                                         setActiveImage(0);
                                     }}
-                                    className="text-gray-600 hover:text-orange-500 transition text-2xl"
+                                    className="text-gray-600 hover:text-orange-500 transition text-xl lg:text-sm 2xl:text-xl"
                                     aria-label="Close modal"
                                 >
                                     ✖
@@ -342,33 +435,36 @@ const ProjectPage = () => {
                             </div>
 
                             {/* Content */}
-                            <div className="px-8 pb-8 overflow-y-auto max-h-[80vh] space-y-10">
+                            <div className="px-8 mt-4 pb-4 overflow-y-auto max-h-[80vh] space-y-6">
                                 {/* Hero image */}
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.97 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.4 }}
-                                    className="w-full h-72 md:h-96 rounded-xl overflow-hidden shadow-lg"
-                                >
-                                    <img
-                                        src={selectedProject.images[activeImage]}
-                                        alt={`${selectedProject.name} main`}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </motion.div>
+                                <div className="md:flex gap-8 ">
+                                    {/* main image */}
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.97 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.4 }}
+                                        className="w-full h-72 md:h-96 rounded-xl overflow-hidden shadow-lg"
+                                    >
+                                        <img
+                                            src={selectedProject.images[activeImage]}
+                                            alt={`${selectedProject.name} main`}
+                                            className="w-full h-full object-contain mx-auto block"
+                                        />
+                                    </motion.div>
 
-                                {/* Thumbnails */}
-                                <div className="flex gap-4 overflow-x-auto pb-2">
-                                    {selectedProject.images.map((img, idx) => (
-                                        <button
-                                            key={idx}
-                                            onClick={() => setActiveImage(idx)}
-                                            className={`flex-shrink-0 w-28 h-20 rounded-lg overflow-hidden shadow-md transition focus:outline-none focus:ring-2 focus:ring-orange-400 ${activeImage === idx ? "ring-2 ring-orange-500" : "opacity-75 hover:opacity-100"
-                                                }`}
-                                        >
-                                            <img src={img} alt={`${selectedProject.name} ${idx + 1}`} className="w-full h-full object-cover" />
-                                        </button>
-                                    ))}
+                                    {/* Thumbnails */}
+                                    <div className="mt-4 md:w-52 max-w-60 md:mt-0 flex md:flex-col md:justify-center md:items-center gap-4 overflow-x-auto pb-2">
+                                        {selectedProject.images.map((img, idx) => (
+                                            <button
+                                                key={idx}
+                                                onClick={() => setActiveImage(idx)}
+                                                className={`flex-shrink-0 w-28 h-20 rounded-lg overflow-hidden shadow-md transition focus:outline-none focus:ring-2 focus:ring-orange-400 ${activeImage === idx ? "ring-2 ring-orange-500" : "opacity-75 hover:opacity-100"
+                                                    }`}
+                                            >
+                                                <img src={img} alt={`${selectedProject.name} ${idx + 1}`} className="w-full h-full object-cover" />
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
 
                                 {/* Links */}
@@ -486,7 +582,7 @@ const ProjectPage = () => {
             </AnimatePresence>
 
             {/* Current Projects (freelancing impact) */}
-            <div className="mt-20 space-y-8">
+            <div id="current-projects" className="mt-20 space-y-8">
                 <h2 className="text-2xl font-bold">Current Projects</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10">
                     {currentWork.map((item) => (
