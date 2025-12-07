@@ -420,7 +420,7 @@ const ProjectPage = () => {
                         >
                             {/* Header */}
                             <div className="flex items-center justify-between px-8 py-3 border-b border-gray-200">
-                                <h3 className="text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl font-bold text-gray-900">
+                                <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl font-bold text-gray-900">
                                     {selectedProject.name}
                                 </h3>
                                 <button
@@ -428,7 +428,7 @@ const ProjectPage = () => {
                                         setSelectedProject(null);
                                         setActiveImage(0);
                                     }}
-                                    className="text-gray-600 hover:text-orange-500 transition text-xl lg:text-sm 2xl:text-xl"
+                                    className="text-gray-600 hover:text-orange-500 transition text-sm sm:text-xl lg:text-sm 2xl:text-xl"
                                     aria-label="Close modal"
                                 >
                                     ✖
@@ -454,12 +454,12 @@ const ProjectPage = () => {
                                     </motion.div>
 
                                     {/* Thumbnails */}
-                                    <div className="mt-4 md:w-52 max-w-60 md:mt-0 flex md:flex-col md:justify-center md:items-center gap-4 overflow-x-auto pb-2">
+                                    <div className="mt-4 py-2 px-4 md:px-0 md:w-52 w-full sm:max-w-60 md:mt-0 flex md:flex-col md:justify-center md:items-center gap-4 overflow-x-auto">
                                         {selectedProject.images.map((img, idx) => (
                                             <button
                                                 key={idx}
                                                 onClick={() => setActiveImage(idx)}
-                                                className={`flex-shrink-0 w-28 h-20 rounded-lg overflow-hidden shadow-md transition focus:outline-none focus:ring-2 focus:ring-orange-400 ${activeImage === idx ? "ring-2 ring-orange-500" : "opacity-75 hover:opacity-100"
+                                                className={`flex-shrink-0 p-2 w-28 h-20 rounded-lg overflow-hidden shadow-md transition focus:outline-none focus:ring-2 focus:ring-orange-400 ${activeImage === idx ? "ring-2 ring-orange-500" : "opacity-75 hover:opacity-100"
                                                     }`}
                                             >
                                                 <img src={img} alt={`${selectedProject.name} ${idx + 1}`} className="w-full h-full object-cover" />
@@ -564,12 +564,12 @@ const ProjectPage = () => {
                                 {/* CTA */}
                                 <div className="flex flex-col sm:flex-row justify-end gap-4 pt-2">
                                     <Link to="/contact">
-                                        <button className="bg-gray-900 text-white py-2.5 px-6 rounded-lg hover:bg-black transition">
+                                        <button className="bg-gray-900 w-full text-white py-2.5 px-6 rounded-lg hover:bg-black transition">
                                             Contact Us
                                         </button>
                                     </Link>
-                                    <Link to="/services">
-                                        <button className="bg-orange-500 text-white py-2.5 px-6 rounded-lg hover:bg-orange-600 transition">
+                                    <Link to="/services" >
+                                        <button className="bg-orange-500 w-full text-white py-2.5 px-6 rounded-lg hover:bg-orange-600 transition">
                                             Services
                                         </button>
                                     </Link>
