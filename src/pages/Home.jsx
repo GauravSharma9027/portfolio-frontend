@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Typewriter } from "react-simple-typewriter";
+import sagarImg from "../assets/sagar image.jpg";
 const Home = () => {
     return (
         <motion.div
@@ -21,7 +22,7 @@ const Home = () => {
                     <h2 className="text-3xl md:text-2xl font-bold text-gray-900">
                         I'm a <span className="text-red-500">
                             <Typewriter
-                                words={["Full Stack Developer.","Web Developer.", "Designer.", "Freelancer.","Software Developer."]}
+                                words={["Full Stack Developer.", "Web Developer.", "Designer.", "Freelancer.", "Software Developer."]}
                                 loop={true}
                                 cursor
                                 cursorStyle="|"
@@ -46,7 +47,7 @@ const Home = () => {
                 {/* Right Image */}
                 <div className="lg:w-1/2 mt-8 lg:mt-0 relative flex justify-center ">
                     <img
-                        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=800&q=80"
+                        src={sagarImg}
                         alt="Profile"
                         className="w-64 sm:w-[26rem] md:w-96 lg:w-70 max-h-70 sm:max-h-[28rem]  md:max-h-[30rem] lg:max-h-[24rem] rounded-sm object-cover mx-8 my-10"
                     />
