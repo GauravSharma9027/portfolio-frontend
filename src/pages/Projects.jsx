@@ -1,5 +1,6 @@
 // ProjectPage.jsx
 import React, { useEffect, useState, useCallback, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import CountUp from "react-countup";
@@ -11,8 +12,10 @@ import digitexguiderLaptop from "../assets/Pages/Projects/Digital Services & Blo
 import tempulsePhone from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Phone.png"
 import tempulseTablet from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Tablet.png"
 import tempulseLaptop from "../assets/Pages/Projects/Tempulse Global Consultancy Website/Laptop.png"
-import { Link } from "react-router-dom";
-
+// Project 3
+import cdrconverterPhone from "../assets/Pages/Projects/CDR Converter/cdrconverterPhone.png"
+import cdrconverterTablet from "../assets/Pages/Projects/CDR Converter/cdrconverterTablet.png"
+import cdrconverterLaptop from "../assets/Pages/Projects/CDR Converter/cdrconverterLaptop.png"
 
 // Reusable pill
 
@@ -32,9 +35,9 @@ const ProjectPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
 
     // Impact stats
-    const totalProjects = 8;
-    const currentProjects = 3;
-    const freelanceClients = 9;
+    const totalProjects = 3;
+    const currentProjects = 2;
+    const freelanceClients = 4;
 
     // Close modal on ESC
     const handleKeyDown = useCallback((e) => {
@@ -61,6 +64,55 @@ const ProjectPage = () => {
 
     // Portfolio projects (replace image paths with your assets)
     const projects = [
+        {
+            name: "CDR Converter – Online File Conversion Platform",
+            short: "High-performance online tool to convert CDR files into PNG, PDF, JPG, and other formats.",
+            images: [
+                cdrconverterLaptop,
+                cdrconverterTablet,
+                cdrconverterPhone
+            ],
+            github: null, // Production project with external APIs
+            live: "https://cdrconverter.com/",
+            tech: [
+                "React Js",
+                "Tailwind Css",
+                "Node Js",
+                "Express Js",
+                "REST APIs",
+                "File Conversion APIs",
+                "Nginx",
+            ],
+            description:
+                "A fully live, production-ready online file conversion platform built using React and Node.js. The platform allows users to convert CDR files into PNG, PDF, JPG, and other formats using multiple external conversion APIs. Designed for speed, scalability, and monetization, the website is optimized for SEO and integrated with Google AdSense for revenue generation.",
+            features: [
+                "Convert CDR files to PNG, PDF, JPG & other formats",
+                "Multiple external APIs for reliable file conversion",
+                "Fast and responsive React-based UI",
+                "Secure file upload and processing system",
+                "Live Google AdSense ads integration",
+                "SEO-friendly architecture for organic traffic",
+                "Mobile, tablet & desktop optimized layout",
+                "Production deployment on Ubuntu server with Nginx"
+            ],
+            challenges: [
+                "Handling large file uploads efficiently",
+                "Managing multiple third-party conversion APIs",
+                "Ensuring fast response time during file processing",
+                "Preventing server overload and API failures",
+                "Maintaining AdSense compliance with dynamic content"
+            ],
+            outcomes: [
+                "Successfully launched a fully live conversion platform",
+                "Stable and fast file conversion experience for users",
+                "Ads displaying properly across all pages",
+                "Improved SEO visibility for file conversion keywords",
+                "Created a monetizable SaaS-style web tool"
+            ],
+            role: "Full Stack Developer",
+            timeline: "1 weeks",
+            category: "Web / SaaS Tool"
+        },
         {
             name: "Digital Services & Blogging Platform",
             short: "SEO-optimized WordPress website with service pages, blog system, and scalable structure.",
@@ -136,123 +188,12 @@ const ProjectPage = () => {
             role: "Frontend & CMS Developer / Web Designer",
             timeline: "4–5 weeks",
             category: "Web / Consultancy"
-        },
-        {
-            name: "E‑Commerce Platform",
-            short: "Scalable store with catalog, cart, payments, and admin dashboard.",
-            images: ["/images/ecommerce1.jpg", "/images/ecommerce2.jpg", "/images/ecommerce3.jpg"],
-            github: "https://github.com/yourgithub/ecommerce",
-            live: "https://yourecommerce.vercel.app",
-            tech: ["React.js", "Node.js", "MongoDB", "TailwindCSS", "Stripe"],
-            description:
-                "Full‑stack e‑commerce engineered for performance and scale. Advanced product management, secure checkout, order lifecycle, analytics, and role‑based admin. Reusable UI components and robust API design.",
-            features: [
-                "Product filters, search, pagination",
-                "Secure payments (Stripe) with webhooks",
-                "Role‑based admin and analytics",
-                "Responsive UI and SEO best practices",
-                "Server‑side validation, protected routes"
-            ],
-            challenges: [
-                "Optimizing queries for large catalogs",
-                "Webhook reliability and failure handling",
-                "Scalable state across complex flows"
-            ],
-            outcomes: [
-                "Checkout conversion +18% post UX refinement",
-                "Lighthouse 90+ with <2s load on 4G",
-                "Admin manual tasks reduced by 40%"
-            ],
-            role: "Full‑stack developer",
-            timeline: "8 weeks",
-            category: "Web"
-        },
-        {
-            name: "Portfolio Website",
-            short: "Premium portfolio with projects, blog, and contact routing.",
-            images: ["/images/portfolio1.jpg", "/images/portfolio2.jpg", "/images/portfolio3.jpg"],
-            github: "https://github.com/yourgithub/portfolio",
-            live: "https://sajidali.dev",
-            tech: ["React.js", "Framer Motion", "TailwindCSS"],
-            description:
-                "Cinematic portfolio focused on storytelling and clarity. Book‑style sections, glassmorphism accents, and smooth motion for case studies. Built for fast pitching and client conversion.",
-            features: [
-                "Project deep‑dives via rich modal",
-                "Micro‑interactions and animated transitions",
-                "Component‑driven responsive layout",
-                "Contact routing with validation"
-            ],
-            challenges: [
-                "Balancing motion and performance",
-                "Designing scalable component patterns"
-            ],
-            outcomes: [
-                "Avg session duration +35%",
-                "Direct inquiries +22% MoM"
-            ],
-            role: "Frontend developer & designer",
-            timeline: "2 weeks (ongoing iteration)",
-            category: "UI/UX"
-        },
-        {
-            name: "Food Delivery App",
-            short: "Cross‑platform app with live tracking and push notifications.",
-            images: ["/images/food1.jpg", "/images/food2.jpg", "/images/food3.jpg"],
-            github: "https://github.com/yourgithub/foodapp",
-            live: "https://foodapp.vercel.app",
-            tech: ["React Native", "Firebase", "Node.js"],
-            description:
-                "Mobile‑first food ordering with real‑time tracking, secure auth, and offline caching. Designed for speed and reliability under variable networks.",
-            features: [
-                "Live order status and map updates",
-                "Firebase auth with social sign‑in",
-                "Offline caching and optimistic UI",
-                "Push notifications for lifecycle events"
-            ],
-            challenges: [
-                "Network resilience in low‑bandwidth regions",
-                "Battery‑friendly background updates"
-            ],
-            outcomes: [
-                "Crash‑free sessions 99.5%",
-                "Order success +16% after offline optimization"
-            ],
-            role: "Mobile developer",
-            timeline: "6 weeks",
-            category: "Mobile"
-        },
-        {
-            name: "Architecture Consulting",
-            short: "Stack selection, audits, and performance optimization.",
-            images: ["/images/consult1.jpg", "/images/consult2.jpg", "/images/consult3.jpg"],
-            github: "https://github.com/yourgithub/consulting-docs",
-            live: "https://consulting-services.vercel.app",
-            tech: ["MERN", "Cloud", "DevOps"],
-            description:
-                "End‑to‑end consulting for scalable systems: architecture reviews, performance tuning, and pragmatic roadmaps. Outcome‑driven engagements tailored to business goals.",
-            features: [
-                "Architecture audit and risk assessment",
-                "Performance tuning and cost optimization",
-                "Scalability roadmap and CI/CD setup"
-            ],
-            challenges: [
-                "Legacy constraints and data migrations",
-                "Balancing cost with performance targets"
-            ],
-            outcomes: [
-                "Infra costs ‑28% post optimization",
-                "P95 latency improved by 34%"
-            ],
-            role: "Consultant (architecture, performance)",
-            timeline: "2–4 weeks (per engagement)",
-            category: "Consulting"
         }
     ];
 
     // Current projects (freelancing visibility)
     const currentWork = [
         { name: "Site Management System", progress: 75, tech: ["React JS", "Tailwind CSS", "Chart JS", "Frame Motion"] },
-        { name: "CDR File Converter", progress: 90, tech: ["React JS", "Tailwind CSS", "Node JS", "Express JS"] },
         { name: "Note Mania", progress: 30, tech: ["React JS", "Tailwind CSS", "Framer Motion", "Node JS", "Express JS", "Cloudinary", "Multer"] },
     ];
 

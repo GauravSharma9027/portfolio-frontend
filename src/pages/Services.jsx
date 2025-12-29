@@ -118,7 +118,7 @@ const Services = () => {
                         initial={{ opacity: 0, scale: 0.92 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: idx * 0.1 }}
-                        onClick={() => setSelectedService(service)}
+                        // onClick={() => setSelectedService(service)}
                         className="cursor-pointer bg-white/30 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-transform"
                     >
                         <div className="mb-4">{service.icon}</div>

@@ -155,11 +155,9 @@ const ContactPage = () => {
                 className="mt-16 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mb-8"
             >
                 {[
-                    { icon: <FaLinkedin />, label: "LinkedIn", href: "https://linkedin.com" },
-                    { icon: <FaTwitter />, label: "Twitter/X", href: "https://twitter.com" },
-                    { icon: <FaInstagram />, label: "Instagram", href: "https://instagram.com" },
-                    { icon: <FaGithub />, label: "GitHub", href: "https://github.com" },
-                    { icon: <FaFacebook />, label: "Facebook", href: "https://facebook.com" },
+                    { icon: <FaLinkedin />, label: "LinkedIn", href: "https://www.linkedin.com/in/gaurav-sharma9 " },
+                    { icon: <FaTwitter />, label: "Twitter/X", href: "https://x.com/GauravShar77354" },
+                    { icon: <FaGithub />, label: "GitHub", href: "https://github.com/GauravSharma9027" },
                 ].map((s) => (
                     <a
                         key={s.label}
