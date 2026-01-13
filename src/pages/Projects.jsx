@@ -122,7 +122,7 @@ const ProjectPage = () => {
                 digitexguiderPhone
             ],
             github: null, // WordPress-based project, so GitHub not applicable
-            live: "https://digitexguider.com/",
+            // live: "https://digitexguider.com/",
             tech: ["WordPress", "Elementor", "PHP", "MySQL", "cPanel", "Yoast SEO"],
             description:
                 "A fully responsive digital services website built on WordPress, designed for performance, SEO, and service-based conversions. Includes custom landing pages, optimized blog section, mobile-first design, and fast-loading architecture. Ideal for agencies needing a professional online presence and lead-generation funnel.",
@@ -160,7 +160,7 @@ const ProjectPage = () => {
                 tempulsePhone
             ],
             github: null,  // WordPress/Static site — no public GitHub repo listed
-            live: "https://tempulse.global/",
+            // live: "https://tempulse.global/",
             tech: ["WordPress", "HTML5", "CSS3", "JavaScript", "PHP", "Responsive design"],
             description:
                 "A professional, multi-service consultancy website built for Tempulse Global — combining international business-formation services, virtual offices, digital transformation consulting, VR empowerment programs and web/AI-services under one roof. The site is optimized for global reach, multilingual support, clear service navigation and lead generation through clean UX and strategic layout.",
