@@ -16,7 +16,10 @@ import tempulseLaptop from "../assets/Pages/Projects/Tempulse Global Consultancy
 import cdrconverterPhone from "../assets/Pages/Projects/CDR Converter/cdrconverterPhone.png"
 import cdrconverterTablet from "../assets/Pages/Projects/CDR Converter/cdrconverterTablet.png"
 import cdrconverterLaptop from "../assets/Pages/Projects/CDR Converter/cdrconverterLaptop.png"
-
+// Project 4
+import systemManagementPhone from "../assets/Pages/Projects/Site Management System Vendor/Phone.png"
+import systemManagementTablet from "../assets/Pages/Projects/Site Management System Vendor/Tablet.png"
+import systemManagementLaptop from "../assets/Pages/Projects/Site Management System Vendor/Laptop.png"
 // Reusable pill
 
 const Pill = ({ children }) => (
@@ -64,6 +67,7 @@ const ProjectPage = () => {
 
     // Portfolio projects (replace image paths with your assets)
     const projects = [
+        // project 1
         {
             name: "CDR Converter – Online File Conversion Platform",
             short: "High-performance online tool to convert CDR files into PNG, PDF, JPG, and other formats.",
@@ -111,46 +115,48 @@ const ProjectPage = () => {
             ],
             role: "Full Stack Developer",
             timeline: "1 weeks",
-            category: "Web / SaaS Tool"
-        },
-        {
-            name: "Digital Services & Blogging Platform",
-            short: "SEO-optimized WordPress website with service pages, blog system, and scalable structure.",
-            images: [
-                digitexguiderLaptop,
-                digitexguiderTablet,
-                digitexguiderPhone
-            ],
-            github: null, // WordPress-based project, so GitHub not applicable
-            // live: "https://digitexguider.com/",
-            tech: ["WordPress", "Elementor", "PHP", "MySQL", "cPanel", "Yoast SEO"],
-            description:
-                "A fully responsive digital services website built on WordPress, designed for performance, SEO, and service-based conversions. Includes custom landing pages, optimized blog section, mobile-first design, and fast-loading architecture. Ideal for agencies needing a professional online presence and lead-generation funnel.",
-            features: [
-                "Custom Elementor-based pages for services",
-                "Fully responsive mobile-first UI",
-                "Optimized blog system with categories & tags",
-                "Yoast-powered SEO optimization",
-                "Speed-optimized caching & CDN integration",
-                "Contact forms with email routing",
-                "User-friendly CMS for non-tech users"
-            ],
-            challenges: [
-                "Maintaining site speed with heavy content blocks",
-                "Building optimized page layouts using Elementor",
-                "SEO tuning for higher Google discoverability",
-                "Ensuring uniform design across all screen sizes"
-            ],
-            outcomes: [
-                "Page load time improved to under 2.5 seconds",
-                "SEO health score increased to 90+",
-                "Conversion rate improved with optimized landing pages",
-                "Better engagement due to structured blog content"
-            ],
-            role: "Frontend & WordPress Developer",
-            timeline: "2 weeks",
             category: "Web"
         },
+        // project 2
+        // {
+        //     name: "Digital Services & Blogging Platform",
+        //     short: "SEO-optimized WordPress website with service pages, blog system, and scalable structure.",
+        //     images: [
+        //         digitexguiderLaptop,
+        //         digitexguiderTablet,
+        //         digitexguiderPhone
+        //     ],
+        //     github: null, // WordPress-based project, so GitHub not applicable
+        //     // live: "https://digitexguider.com/",
+        //     tech: ["WordPress", "Elementor", "PHP", "MySQL", "cPanel", "Yoast SEO"],
+        //     description:
+        //         "A fully responsive digital services website built on WordPress, designed for performance, SEO, and service-based conversions. Includes custom landing pages, optimized blog section, mobile-first design, and fast-loading architecture. Ideal for agencies needing a professional online presence and lead-generation funnel.",
+        //     features: [
+        //         "Custom Elementor-based pages for services",
+        //         "Fully responsive mobile-first UI",
+        //         "Optimized blog system with categories & tags",
+        //         "Yoast-powered SEO optimization",
+        //         "Speed-optimized caching & CDN integration",
+        //         "Contact forms with email routing",
+        //         "User-friendly CMS for non-tech users"
+        //     ],
+        //     challenges: [
+        //         "Maintaining site speed with heavy content blocks",
+        //         "Building optimized page layouts using Elementor",
+        //         "SEO tuning for higher Google discoverability",
+        //         "Ensuring uniform design across all screen sizes"
+        //     ],
+        //     outcomes: [
+        //         "Page load time improved to under 2.5 seconds",
+        //         "SEO health score increased to 90+",
+        //         "Conversion rate improved with optimized landing pages",
+        //         "Better engagement due to structured blog content"
+        //     ],
+        //     role: "Frontend & WordPress Developer",
+        //     timeline: "2 weeks",
+        //     category: "Web"
+        // },
+        // project 3
         {
             name: "Tempulse Global Consultancy Website",
             short: "International consulting & virtual-office platform website with global services and digital transformation offerings.",
@@ -187,14 +193,63 @@ const ProjectPage = () => {
             ],
             role: "Frontend & CMS Developer / Web Designer",
             timeline: "4–5 weeks",
-            category: "Web / Consultancy"
+            category: "Web"
+        },
+        // project 4
+        {
+            name: "System Management Dashboard – Enterprise Web Application",
+            short: "A modern system management platform to monitor, manage, and control organizational data and workflows.",
+            images: [
+                systemManagementLaptop,
+                systemManagementTablet,
+                systemManagementPhone
+            ],
+            github: null, // Live production project
+            live: "https://omegainfram.com/vendor/", // hosted on :contentReference[oaicite:0]{index=0}
+            tech: [
+                "React Js",
+                "Tailwind Css",
+                "JavaScript (ES6+)",
+                "REST APIs",
+                "Chart & Data Visualization",
+                "Deployment on Cloud Hosting"
+            ],
+            description:
+                "A fully live system management web application built using React.js with a focus on performance, scalability, and clean UI. The platform helps organizations manage system records, user roles, operational data, and activity tracking through a centralized dashboard. Designed with an enterprise mindset, the application is responsive, secure, and optimized for real-world business usage.",
+            features: [
+                "Centralized system management dashboard",
+                "User & role-based access management",
+                "Real-time data rendering and updates",
+                "Responsive UI for desktop, tablet & mobile",
+                "Secure authentication & authorization flow",
+                "Dynamic tables with search, filter & pagination",
+                "Clean and modern UI using Tailwind CSS",
+                "Live deployment with production-ready configuration"
+            ],
+            challenges: [
+                "Designing scalable and reusable React components",
+                "Managing complex state across multiple modules",
+                "Implementing role-based UI access control",
+                "Ensuring performance with large datasets",
+                "Maintaining clean UI while handling dense system data"
+            ],
+            outcomes: [
+                "Successfully deployed a live system management platform",
+                "Improved operational visibility through centralized data",
+                "Smooth and responsive user experience across devices",
+                "Created a real-world, enterprise-grade React project",
+                "Strengthened frontend architecture and system design skills"
+            ],
+            role: "Frontend / React Developer",
+            timeline: "5-7 Days",
+            category: "Web"
         }
     ];
 
     // Current projects (freelancing visibility)
     const currentWork = [
-        { name: "Site Management System", progress: 75, tech: ["React JS", "Tailwind CSS", "Chart JS", "Frame Motion"] },
-        { name: "Note Mania", progress: 30, tech: ["React JS", "Tailwind CSS", "Framer Motion", "Node JS", "Express JS", "Cloudinary", "Multer"] },
+        { name: "Omega Fram website", progress: 30, tech: ["React JS", "Tailwind CSS", "Chart JS", "Frame Motion","ASO","React-Router-Dom"] },
+        { name: "Note Mania", progress: 45, tech: ["React JS", "Tailwind CSS", "Framer Motion", "Node JS", "Express JS", "Cloudinary", "Multer"] },
     ];
 
     // Search + category filter
